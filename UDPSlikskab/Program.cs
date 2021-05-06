@@ -11,6 +11,7 @@ namespace UDPSlikskab
     {
         static void Main(string[] args)
         {
+            Post postData = new Post();
             UdpClient receiveUdp = new UdpClient(9001);
             IPEndPoint receiveEndPoint = new IPEndPoint(IPAddress.Any, 0);
 
@@ -29,15 +30,17 @@ namespace UDPSlikskab
                     Console.WriteLine(receivedData);
 
                     string[] txtSplit = receivedData.Split(" ");
-                    for (int i = 0; i < txtSplit.Length; i++)
-                    {
-                        Console.WriteLine(txtSplit[i]);
-                    }
 
-                    SensorData sensorData = new SensorData(Convert.ToInt16(txtSplit[0]), Convert.ToInt16(txtSplit[1]),
-                        Convert.ToDateTime(txtSplit[2] + " " + txtSplit[3]), Convert.ToBoolean(txtSplit[4]));
-                    Thread.Sleep(3000);
-                    break;
+                    //for (int i = 0; i < txtSplit.Length; i++)
+                    //{
+                    //    Console.WriteLine(txtSplit[i]);
+                    //}
+
+                    //SensorData sensorData = new SensorData(Convert.ToInt16(txtSplit[0]), Convert.ToInt16(txtSplit[1]),
+                    //    Convert.ToInt16(txtSplit[2]), Convert.ToBoolean(txtSplit[3]), Convert.ToString(txtSplit[4]));
+
+                    //postData.PostItemHttpTask(sensorData);
+                    //Thread.Sleep(1000);
                 }
 
             }
