@@ -31,16 +31,16 @@ namespace UDPSlikskab
 
                     string[] txtSplit = receivedData.Split(" ");
 
-                    //for (int i = 0; i < txtSplit.Length; i++)
-                    //{
-                    //    Console.WriteLine(txtSplit[i]);
-                    //}
+                    for (int i = 0; i < txtSplit.Length; i++)
+                    {
+                        Console.WriteLine(txtSplit[i]);
+                    }
 
-                    //SensorData sensorData = new SensorData(Convert.ToInt16(txtSplit[0]), Convert.ToInt16(txtSplit[1]),
-                    //    Convert.ToInt16(txtSplit[2]), Convert.ToBoolean(txtSplit[3]), Convert.ToString(txtSplit[4]));
+                    SensorData sensorData = new SensorData(Convert.ToInt16(txtSplit[0]), Convert.ToInt16(txtSplit[1]),
+                        Convert.ToInt32(txtSplit[2]), Convert.ToBoolean(txtSplit[3]), Convert.ToString(txtSplit[4]));
 
-                    //postData.PostItemHttpTask(sensorData);
-                    //Thread.Sleep(1000);
+                    postData.PostItemHttpTask(sensorData);
+                    Thread.Sleep(1000);
                 }
 
             }

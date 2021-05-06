@@ -9,20 +9,20 @@ namespace ModelLibSlikskab
         public int ReadingId { get; set; }
         public int Time { get; set; }
         public bool IsOpen { get; set; }
-        public string ImageData { get; set; }
+        public string Image { get; set; }
 
-        public SensorData(int sensorID, int readingId, int time, bool isOpen, string imageData)
+        public SensorData(int sensorID, int readingId, int time, bool isOpen, string image)
         {
             SensorID = sensorID;
             Time = time;
             IsOpen = isOpen;
-            ImageData = imageData;
+            Image = image;
             ReadingId = readingId;
         }
 
         public override string ToString()
         {
-            return SensorID +" "+ ReadingId + " " + Time + " " + IsOpen + " " + ImageData;
+            return SensorID +" "+ ReadingId + " " + Time + " " + IsOpen + " " + Image;
         }
         //test1 git
     }
