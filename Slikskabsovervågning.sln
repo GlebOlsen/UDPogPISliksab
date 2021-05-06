@@ -7,10 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelLibSlikskab", "ModelLi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDPSlikskab", "UDPSlikskab\UDPSlikskab.csproj", "{737B69AB-01B4-4E3C-A1A6-91A35194FB6A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python", "Python", "{3A7C2731-E429-496E-8AE6-0757C4479284}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python", "Python", "{9D906F6C-C9E3-48E0-BADF-F954815D11D5}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\Users\Prime\Desktop\sensorudp.py = ..\..\..\Users\Prime\Desktop\sensorudp.py
+		UDPSlikskab\sensorudp.py = UDPSlikskab\sensorudp.py
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLibSlikskabTests", "ModelLibSlikskabTests\ModelLibSlikskabTests.csproj", "{98F4F982-D533-4AAE-BF42-87A4396D8629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{737B69AB-01B4-4E3C-A1A6-91A35194FB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{737B69AB-01B4-4E3C-A1A6-91A35194FB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{737B69AB-01B4-4E3C-A1A6-91A35194FB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F4F982-D533-4AAE-BF42-87A4396D8629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F4F982-D533-4AAE-BF42-87A4396D8629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F4F982-D533-4AAE-BF42-87A4396D8629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F4F982-D533-4AAE-BF42-87A4396D8629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
