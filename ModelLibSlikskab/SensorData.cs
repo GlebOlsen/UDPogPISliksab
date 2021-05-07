@@ -24,7 +24,6 @@ namespace ModelLibSlikskab
         {
             return SensorID +" "+ ReadingId + " " + Time + " " + IsOpen + " " + Image;
         }
-        //test1 git
     }
     
 }

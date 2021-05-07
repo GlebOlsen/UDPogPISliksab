@@ -12,6 +12,7 @@ namespace UDPSlikskab
     {
         public async void PostItemHttpTask(SensorData sensordata)
         {
+            //Her sætter vi linket til databasen som vi skal poste til
             string EventWebApi = "https://slikskabdata.azurewebsites.net/";
 
             using (HttpClient client = new HttpClient())
