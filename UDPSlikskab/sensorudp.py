@@ -10,6 +10,7 @@ import PIL
 import glob
 import urllib
 import base64
+from pushbullet import Pushbullet
 
 #Vores nummer 1 sensor
 SensorID = 1
@@ -20,6 +21,9 @@ s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 GPIO.setmode(GPIO.BOARD)
 channel = 5
 GPIO.setup(channel, GPIO.IN)
+
+pb = Pushbullet("o.A0gGsWLmgPF64Ju3gZWQ2P4tbTZ7v4g1")
+print(pb.devices)
 
 IsOpen = 0
 IsOpenbool = "false"
@@ -64,5 +68,7 @@ while True:
 
         data = str(SensorID) + " " + str("1") + " " + str(int(time.time())) + " " + str(IsOpenbool)  + " " +  str(bar) 
         print(data)
+        dev = pb.get_device('OnePlus IN2023')
+        push = dev.push_note("ALERT!!", "SOMEONE IS IN YOUR SLIKSKAB")
         s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
         time.sleep(1)
